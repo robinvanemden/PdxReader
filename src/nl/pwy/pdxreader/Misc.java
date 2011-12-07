@@ -1,5 +1,8 @@
 package nl.pwy.pdxreader;
 
+/**
+ * @author Robin van Emden
+ */
 public class Misc {
     /**
      * Check if char is plain ASCII upper case.
@@ -10,7 +13,7 @@ public class Misc {
      */
     public static boolean isUnaccentedUpperCase(char c) {
         return 'A' <= c && c <= 'Z';
-    } // end isUnaccentedUpperCase
+    } 
 
     /**
      * Check if char is plain ASCII lower case.
@@ -21,7 +24,7 @@ public class Misc {
      */
     public static boolean isUnaccentedLowerCase(char c) {
         return 'a' <= c && c <= 'z';
-    } // isUnaccentedLowerCase
+    } 
 
     /**
      * Is this string empty?
@@ -32,7 +35,7 @@ public class Misc {
      */
     public static boolean isEmpty(String s) {
         return (s == null) || s.trim().length() == 0;
-    } // end isEmpty
+    } 
 
     /**
      * Convert String to canonical standard form.
@@ -45,7 +48,7 @@ public class Misc {
     public static String canonical(String s) {
         if (s == null) return "";
         else return s.trim();
-    } // end canonical
+    } 
 
     /**
      * Produce a String of a given repeating character.
@@ -65,7 +68,7 @@ public class Misc {
             s.setCharAt(i, c);
         }
         return s.toString().intern();
-    } // end rep
+    } 
 
     /**
      * Convert an integer to a String, with left zeroes.
@@ -82,7 +85,7 @@ public class Misc {
             // pad on left with zeros
             return "000000000000000000000000000".substring(0, len - s.length()) + s;
         else return s;
-    } // end toLZ
+    } 
 
     /**
      * Extracts a number from a string, returns 0 if malformed.
@@ -98,7 +101,7 @@ public class Misc {
 
         }
         return result;
-    } //end pluck
+    } 
 
     /**
      * Caps the max value, ensuring it does not go too high.
@@ -112,7 +115,7 @@ public class Misc {
     public static int cap(int v, int high) {
         if (v > high) return high;
         else return v;
-    } // end cap
+    } 
 
     /**
      * Ensures a value does not go too low.
@@ -126,7 +129,7 @@ public class Misc {
     public static int hem(int v, int low) {
         if (v < low) return low;
         else return v;
-    } // end hem
+    } 
 
     /**
      * Corrals a value back into safe bounds.
@@ -140,7 +143,7 @@ public class Misc {
         if (v < low) return low;
         else if (v > high) return high;
         else return v;
-    } // end corral
+    } 
 
     /**
      * makeshift system beep if awt.Toolkit.beep is not available.
@@ -149,5 +152,5 @@ public class Misc {
     public static void beep() {
         System.out.print("\007");
         System.out.flush();
-    } // end beep
+    }
 }
