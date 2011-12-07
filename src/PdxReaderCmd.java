@@ -30,7 +30,7 @@ public class PdxReaderCmd {
     public static void main(String[] args) {
 
         if (args.length != 1 || args[0] == null || args[0].equals("")) {
-            System.err.println('\n' + "usage:   java -jar nl.pwy.pdxreader.PdxReader.jar <filename.db> ");
+            System.err.println('\n' + "usage:   java -jar PdxReader.jar <filename.db> ");
             System.exit(1);
         }
 
