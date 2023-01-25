@@ -1,6 +1,6 @@
  PdxReaderCmd.java - 1.0
 
- Copyright (c) 1998-1999 Robin van Emden - robin@pwy.nl
+ Copyright (c) 2023 Robin van Emden - robin@pwy.nl
 
  nl.pwy.pdxreader.PdxReader parses Paradox DB files.
  Should work with versions 3 through 7.
